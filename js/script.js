@@ -130,3 +130,76 @@ function initMobileMenu() {
 
 // Initialize menu
 initMobileMenu();
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project");
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            // Active button style
+            filterButtons.forEach(btn => {
+                btn.classList.remove("bg-[#2e8622]", "text-white");
+                btn.classList.add("text-[#9ca3af]");
+            });
+
+            button.classList.add("bg-[#2e8622]", "text-white");
+            button.classList.remove("text-[#9ca3af]");
+
+            const filter = button.dataset.filter;
+
+            projects.forEach(project => {
+
+                if (
+                    filter === "all" ||
+                    project.classList.contains(filter)
+                ) {
+
+                    // show card
+                    project.classList.remove("hidden");
+
+                    setTimeout(() => {
+                        project.classList.remove(
+                            "opacity-0",
+                            "scale-95",
+                            "-translate-y-4"
+                        );
+
+                        project.classList.add(
+                            "opacity-100",
+                            "scale-100",
+                            "translate-y-0"
+                        );
+                    }, 50);
+
+                } else {
+
+                    // hide animation
+                    project.classList.remove(
+                        "opacity-100",
+                        "scale-100",
+                        "translate-y-0"
+                    );
+
+                    project.classList.add(
+                        "opacity-0",
+                        "scale-95",
+                        "-translate-y-4"
+                    );
+
+                    setTimeout(() => {
+                        project.classList.add("hidden");
+                    }, 500);
+
+                }
+
+            });
+
+        });
+
+    });
+
+});

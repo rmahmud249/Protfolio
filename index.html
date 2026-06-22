@@ -213,6 +213,165 @@
     </div>
 </section>
 <!--============////////////====================-->
+<!--============ Work Section ==================-->
+<!--============////////////====================-->
+<section class="px-4 py-10 lg:py-5 lg:px-12">
+    <div class="rounded-[10px] bg-[rgba(16,21,19,.8)] p-8 lg:p-14">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8 border-b border-white/10">
+            <div>
+                <h2 class="text-5xl font-semibold text-white">
+                    <span class="text-[#2e8622]">P</span>ORTFOLIO
+                </h2>
+            </div>
+            <!------------------Filter Buttons------------------>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button
+                    class="filter-btn px-[18px] py-2 rounded-full text-[13px] font-medium border border-white/10 bg-[#2e8622] text-white"
+                    data-filter="all">
+                    ALL
+                </button>
+                <button
+                    class="filter-btn px-[18px] py-2 rounded-full text-[13px] font-medium border border-white/10 text-[#9ca3af] bg-gradient-to-br from-[#141818] via-[#1B221D] to-[#101513] duration-300"
+                    data-filter="website">
+                    WEBSITE
+                </button>
+                <button
+                    class="filter-btn px-[18px] py-2 rounded-full text-[13px] font-medium border border-white/10 text-[#9ca3af] bg-gradient-to-br from-[#141818] via-[#1B221D] to-[#101513] duration-300"
+                    data-filter="software">
+                    SOFTWARE
+                </button>
+                <button
+                    class="filter-btn px-[18px] py-2 rounded-full text-[13px] font-medium border border-white/10 text-[#9ca3af] bg-gradient-to-br from-[#141818] via-[#1B221D] to-[#101513] duration-300"
+                    data-filter="generator">
+                    GENERATOR
+                </button>
+                <button
+                    class="filter-btn px-[18px] py-2 rounded-full text-[13px] font-medium border border-white/10 text-[#9ca3af] bg-gradient-to-br from-[#141818] via-[#1B221D] to-[#101513] duration-300"
+                    data-filter="app">
+                    APP
+                </button>
+            </div>
+        </div>
+        <!-------------------Projects------------------------>
+        <div class="grid md:grid-cols-2 gap-10 mt-10">
+            <!----------------------Project 1------------------>
+            <div class="project website app group transition-all duration-500 ease-in-out opacity-100 scale-100 translate-y-0">
+                <div class="relative overflow-hidden rounded-3xl cursor-pointer">
+                    <img
+                        src="images/project-1.png"
+                        class="w-full h-[320px] object-cover duration-500 md:group-hover:scale-110">
+                    <!---------------------Overlay---------------->
+                    <div class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 duration-500 md:group-hover:opacity-100">
+                        <a href="#"
+                           class="w-[65px] h-[65px] rounded-full bg-[#2e8622] flex items-center justify-center text-white text-[22px] translate-y-8 duration-500 md:group-hover:translate-y-0">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-5">
+                    <span class="px-[18px] py-2 rounded-full bg-[#141923] border border-white/10 text-[#9ca3af] text-sm duration-300 md:group-hover:bg-[#2e8622] md:group-hover:text-white">
+                      APP
+                    </span>
+                    <span class="px-[18px] py-2 rounded-full bg-[#141923] border border-white/10 text-[#9ca3af] text-sm duration-300 md:group-hover:bg-[#2e8622] md:group-hover:text-white">
+                      WEBSITE
+                    </span>
+                </div>
+                <!----------------Title----------------->
+                <div class="flex items-center justify-between mt-5">
+                    <h3 class="text-xl font-semibold text-white">
+                        AI Security Systems and AI Camera
+                    </h3>
+                    <a href="#" class="text-white text-xl">
+                        <i class="fa-solid fa-arrow-up rotate-45"></i>
+                    </a>
+                </div>
+            </div>
+            <!------------------Project 2----------------->
+            <div class="project generator group transition-all duration-500 ease-in-out opacity-100 scale-100 translate-y-0">
+                <div class="relative overflow-hidden rounded-3xl cursor-pointer">
+                    <img
+                        src="images/project-3.jpg"
+                        class="w-full h-[320px] object-cover duration-500 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 duration-500 md:group-hover:opacity-100">
+                        <a href="#"
+                           class="w-[65px] h-[65px] rounded-full bg-[#2e8622] flex items-center justify-center text-white text-[22px] translate-y-8 duration-500 md:group-hover:translate-y-0">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <span class="px-[18px] py-2 rounded-full bg-[#141923] border border-white/10 text-[#9ca3af] text-sm duration-300 md:group-hover:bg-[#2e8622] md:group-hover:text-white">
+                      GENERATOR
+                    </span>
+                </div>
+                <div class="flex items-center justify-between mt-5">
+                    <h3 class="text-xl font-semibold text-white">
+                        AI Security Systems and AI Camera
+                    </h3>
+                    <a href="#" class="text-white text-xl">
+                        <i class="fa-solid fa-arrow-up rotate-45"></i>
+                    </a>
+                </div>
+            </div>
+            <!------------------Project 3-------------------->
+            <div class="project software group transition-all duration-500 ease-in-out opacity-100 scale-100 translate-y-0">
+                <div class="relative overflow-hidden rounded-3xl cursor-pointer">
+                    <img
+                        src="images/project-2.jpg"
+                        class="w-full h-[320px] object-cover duration-500 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 duration-500 md:group-hover:opacity-100">
+                        <a href="#"
+                           class="w-[65px] h-[65px] rounded-full bg-[#2e8622] flex items-center justify-center text-white text-[22px] translate-y-8 duration-500 md:group-hover:translate-y-0">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <span class="px-[18px] py-2 rounded-full bg-[#141923] border border-white/10 text-[#9ca3af] text-sm duration-300 md:group-hover:bg-[#2e8622] md:group-hover:text-white">
+                        SOFTWARE
+                    </span>
+                </div>
+                <div class="flex items-center justify-between mt-5">
+                    <h3 class="text-xl font-semibold text-white">
+                        AI Security Systems and AI Camera
+                    </h3>
+                    <a href="#" class="text-white text-xl">
+                        <i class="fa-solid fa-arrow-up rotate-45"></i>
+                    </a>
+                </div>
+            </div>
+            <!-------------------Project 4------------------>
+            <div class="project website group transition-all duration-500 ease-in-out opacity-100 scale-100 translate-y-0">
+                <div class="relative overflow-hidden rounded-3xl cursor-pointer">
+                    <img
+                        src="images/project-4.png"
+                        class="w-full h-[320px] object-cover duration-500 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 duration-500 md:group-hover:opacity-100">
+                        <a href="#"
+                           class="w-[65px] h-[65px] rounded-full bg-[#2e8622] flex items-center justify-center text-white text-[22px] translate-y-8 duration-500 md:group-hover:translate-y-0">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <span class="px-[18px] py-2 rounded-full bg-[#141923] border border-white/10 text-[#9ca3af] text-sm duration-300 md:group-hover:bg-[#2e8622] md:group-hover:text-white">
+                        WEBSITE
+                    </span>
+                </div>
+                <div class="flex items-center justify-between mt-5">
+                    <h3 class="text-xl font-semibold text-white">
+                        AI Security Systems and AI Camera
+                    </h3>
+                    <a href="#" class="text-white text-xl">
+                        <i class="fa-solid fa-arrow-up rotate-45"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--============////////////====================-->
 <!--============ Services Section ==============-->
 <!--============////////////====================-->
 <section class="px-4 py-10 lg:py-5 lg:px-12">
@@ -222,9 +381,9 @@
       <p class="text-[#2e8622] text-sm tracking-[4px] uppercase font-medium">
         What I Offer
       </p>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
-        SERVICES
-      </h2>
+       <h2 class="text-5xl font-semibold text-white">
+            <span class="text-[#2e8622]">S</span>ERVICES
+       </h2>
       <div class="w-20 h-[2px] bg-[#2e8622] mx-auto mt-4 rounded-full"></div>
       <p class="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
         I provide modern AI, cloud, and data-driven solutions to help businesses grow and automate their systems efficiently.
@@ -303,10 +462,6 @@
     </div>
   </div>
 </section>
-
-
-
-
 
 
 

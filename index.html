@@ -3,34 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rasel Mahmud</title>
+    <title>Rasel Mahmud Protfolio</title>
     <!---------google font part start--------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!---------googlr font part end----------->
+    <!-----------font-awesome icon------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-----------font-awesomeicon------------->
+    <!--------tailwind css part start--------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!---------tailwind css part end---------->
     <!--------css link part start------------->
     <link rel="stylesheet" href="css/style.css">
     <!--------css link part end--------------->
-    <!--------tailwind css part start--------->
-    <!---------tailwind css part end---------->
 </head>
-<body>
-    <!---------navigation part start---------->
-    <nav>
+<body class="text-white min-h-screen">
+<!-------------------Sidebar------------------------->
+<div id="sidebar"
+    class="w-full lg:w-[350px] lg:fixed lg:top-[30px] lg:left-6 lg:h-[600px] h-auto bg-[#101513] rounded-none lg:rounded-[10px] border-0 lg:border lg:border-white/10 z-40 flex flex-col justify-between transition-all duration-300">
+    <!-- MENU ICON BAR -->
+    <div class="flex mb-4 items-center justify-between pt-[20px] pb-[20px] lg:pb-0 lg:pt-[30px] px-[35px] lg:px-[30px] border-b border-white/10 lg:border-b-0">
+        <!-- MENU BUTTON -->
+        <button id="menuBtn"
+            class="text-white text-[20px] cursor-pointer hover:text-[#43bb33] transition duration-200">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- THEME BUTTON -->
+        <button id="themeBtn"
+            class="text-white text-[20px] cursor-pointer hover:text-[#43bb33] transition duration-200">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+    <!--------------- Personal Info --------------------->
+    <div class="text-center px-4 lg:px-0">
+        <!-------------- Profile Image ------------------>
+        <div class="px-[20px] lg:px-[30px] pb-[20px] flex justify-center lg:block">
+            <img src="images/photo1.png" alt="Profile"
+                class="w-full lg:w-full max-w-none rounded-[20px] object-cover">
+        </div>
+        <!--------------------- Name -------------------->
+        <h2 class="text-[24px] lg:text-[28px] font-medium text-white/85 m-0 leading-tight">
+            Rasel Mahmud
+        </h2>
+        <!----------------- Typing Text ------------------>
+        <div class="h-5 mt-1">
+            <span id="typing-text"
+                class="text-[#43bb33] text-[16px] lg:text-[20px] font-normal whitespace-nowrap overflow-hidden inline-block border-r-[3px] border-[#43bb33] pr-[5px]">
+                Full Stack Developer
+            </span>
+        </div>
+        <!----------------- Social Icons ----------------->
+        <div class="mt-6 lg:mt-8">
+            <a href="#"
+                class="inline-flex items-center justify-center w-10 h-10 text-[18px] text-white border border-white/10 rounded-full mx-1 hover:bg-[#43bb33] hover:text-[#101513] transition-all duration-200">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#"
+                class="inline-flex items-center justify-center w-10 h-10 text-[18px] text-white border border-white/10 rounded-full mx-1 hover:bg-[#43bb33] hover:text-[#101513] transition-all duration-200">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#"
+                class="inline-flex items-center justify-center w-10 h-10 text-[18px] text-white border border-white/10 rounded-full mx-1 hover:bg-[#43bb33] hover:text-[#101513] transition-all duration-200">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#"
+                class="inline-flex items-center justify-center w-10 h-10 text-[18px] text-white border border-white/10 rounded-full mx-1 hover:bg-[#43bb33] hover:text-[#101513] transition-all duration-200">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+    <!-------------- Download Button ---------------->
+    <div class="px-[20px] lg:px-[30px] mb-8 lg:mb-8 mt-6 lg:mt-5">
+        <button
+            class="w-full py-[12px] lg:py-[15px] text-[16px] lg:text-[20px] font-medium text-white bg-[#2e8622] rounded-[5px] hover:bg-[#43bb33] transition-all duration-200 cursor-pointer">
+            <i class="fa-solid fa-download mr-2"></i>
+            Download CV
+        </button>
+    </div>
+</div>
+<!------------------Main Content----------------->
+<main class="lg:ml-85">
+<header class="px-4 lg:px-10 pt-10 relative">
+    <!----------------DESKTOP NAV---------------->
+    <nav class="hidden lg:flex flex-wrap justify-center gap-5">
+        <a href="#"
+            class="text-[#43bb33] text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] flex items-center gap-1">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-user"></i> About
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-briefcase"></i> Works
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-rocket"></i> Services
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-brain"></i> Skills
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-newspaper"></i> Blog
+        </a>
+        <a href="#"
+            class="text-white text-[16px] font-medium px-5 py-2 border border-white/10 rounded-[20px]
+            bg-[linear-gradient(135deg,_#141818_0%,_#1B221D_45%,_#101513_100%)] hover:text-[#43bb33] flex items-center gap-1">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+        </a>
 
     </nav>
-    <!---------navigation part end------------>
-    <!----------main body part start---------->
-    <main>
+    <!-------------OVERLAY-------------------->
+    <div id="overlay"
+        class="fixed inset-0 bg-black/60 hidden z-40 lg:hidden"></div>
+    <!------------MOBILE SIDEBAR-------------->
+    <div id="mobileSidebar"
+        class="fixed top-0 left-0 h-full w-72 z-50 lg:hidden
+        bg-white/10 backdrop-blur-xl border-r border-white/10
+        transform -translate-x-full transition-transform duration-300
+        flex flex-col p-6 gap-4 text-white">
+        <!------------TOP HEADER ROW------------>
+        <div class="flex items-center justify-between mb-6">
+            <!-----------PROFILE---------------->
+            <div class="flex items-center gap-3">
+                <img src="images/photo1.png"
+                    class="w-12 h-12 rounded-full object-cover border border-white/20"
+                    alt="Profile">
+                <div>
+                    <h2 class="text-white font-semibold text-[16px] leading-tight">
+                        Rasel Mahmud
+                    </h2>
+                    <p class="text-gray-300 text-[12px]">
+                        AI/ML Engineer
+                    </p>
+                </div>
+            </div>
+            <!------------CLOSE BUTTON=------------>
+            <button id="closeBtn"
+                class="w-9 h-9 flex items-center justify-center rounded-full
+                bg-white/10 border border-white/20 text-white
+                hover:bg-[#43bb33] hover:text-black transition-all duration-200">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <!-------------------MENU------------------->
+        <a href="#" class="mobile-item active">Home</a>
+        <a href="#" class="mobile-item">About</a>
+        <a href="#" class="mobile-item">Works</a>
+        <a href="#" class="mobile-item">Services</a>
+        <a href="#" class="mobile-item">Skills</a>
+        <a href="#" class="mobile-item">Blog</a>
+        <a href="#" class="mobile-item">Contact</a>
+    </div>
+</header>
+<!--============////////////====================-->
+<!--============ Hero Section ==================-->
+<!--============////////////====================-->
+<section class="px-4 py-0 lg:py-10 lg:px-12">
+    <div class="rounded-[10px] bg-[rgba(16,21,19,0.8)] p-8 lg:p-14">
+        <!-------------Animated Title ------------->
+        <div class="mb-3 text-left">
+            <h2 class="text-2xl font-normal text-white">
+                Hello, I'm
+                <span id="title" class="inline-block text-[#2e8622]"></span>
+            </h2>
+        </div>
+        <!---------------- Main Heading ----------->
+        <h1 class="max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl">
+            AI, Federated Learning,
+            <span class="text-[#2e8622]"> Machine Learning</span>
+            & Deep Learning Engineer
+        </h1>
+        <!-------------- Description -------------->
+        <p class="mt-2 max-w-2xl text-lg font-normal leading-relaxed text-gray-400">
+            Passionate about Artificial Intelligence, Machine Learning, Deep Learning, and Federated Learning. I build intelligent solutions that solve real-world problems.
+        </p>
+        <!--------------Buttons ------------------->
+        <div class="mt-5 flex flex-wrap gap-4">
 
-    </main>
-    <!---------main body part end------------->
-    <!----------footer part start------------->
-    <footer>
+            <!--------------HIRE ME---------------->
+            <button
+                class="rounded-[5px] bg-[#2e8622] px-8 py-4 text-lg font-semibold cursor-pointer text-white
+                transition duration-300 hover:bg-[#43bb33]
+                w-full sm:w-full md:w-auto">
+                Hire Me
+            </button>
 
-    </footer>
-    <!----------footer part end--------------->
+            <!------------VIEW PROJECTS----------->
+            <button
+                class="rounded-[5px] bg-[#2e8622] px-8 py-4 text-lg font-semibold cursor-pointer text-white
+                transition duration-300 hover:bg-[#43bb33]
+                w-full sm:w-full md:w-auto">
+                View Projects
+            </button>
+        </div>
+    </div>
+</section>
+<!--============////////////====================-->
+<!--============ Services Section ==============-->
+<!--============////////////====================-->
+<section class="px-4 py-10 lg:py-5 lg:px-12">
+  <div class="rounded-[10px] bg-[rgba(16,21,19,0.8)] p-8 lg:p-14">
+   <!--------------SECTION HEADER------------>
+    <div class="text-center mb-10">
+      <p class="text-[#2e8622] text-sm tracking-[4px] uppercase font-medium">
+        What I Offer
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
+        SERVICES
+      </h2>
+      <div class="w-20 h-[2px] bg-[#2e8622] mx-auto mt-4 rounded-full"></div>
+      <p class="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
+        I provide modern AI, cloud, and data-driven solutions to help businesses grow and automate their systems efficiently.
+      </p>
+    </div>
+    <!---------------------GRID--------------->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-----------------CARD 1--------------->
+      <div class="rounded-2xl p-6 border border-white/10">
+        <div class="text-[#2e8622] text-3xl mb-4">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <p class="text-sm text-gray-400">AI Automation</p>
+        <h2 class="text-xl font-semibold mt-1">Artificial Intelligence for IT</h2>
+        <p class="text-sm text-gray-400 mt-3 leading-relaxed">
+          AI, machine learning, monitoring and analytics to automate issue detection and resolution.
+        </p>
+        <button class="mt-6 flex items-center gap-2 cursor-pointer text-white font-medium group">
+          GET STARTED
+          <span class="transition-all duration-300 group-hover:pl-2">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+      <!-----------------CARD 2---------------->
+      <div class="rounded-2xl p-6 border border-white/10">
+        <div class="text-[#2e8622] text-3xl mb-4">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <p class="text-sm text-gray-400">Cloud Services</p>
+        <h2 class="text-xl font-semibold mt-1">Cloud Infrastructure Management</h2>
+        <p class="text-sm text-gray-400 mt-3 leading-relaxed">
+          Scalable cloud hosting, deployment automation, and infrastructure monitoring solutions.
+        </p>
+        <button class="mt-6 flex items-center gap-2 cursor-pointer text-white font-medium group">
+          GET STARTED
+          <span class="transition-all duration-300 group-hover:pl-2">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+      <!-----------------CARD 3-------------->
+      <div class="rounded-2xl p-6 border border-white/10">
+        <div class="text-[#2e8622] text-3xl mb-4">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <p class="text-sm text-gray-400">Cyber Security</p>
+        <h2 class="text-xl font-semibold mt-1">Security & Threat Protection</h2>
+        <p class="text-sm text-gray-400 mt-3 leading-relaxed">
+          Advanced threat detection, firewall protection, and real-time security monitoring.
+        </p>
+        <button class="mt-6 flex items-center gap-2 cursor-pointer text-white font-medium group">
+          GET STARTED
+          <span class="transition-all duration-300 group-hover:pl-2">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+      <!----------------CARD 4------------------->
+      <div class="rounded-2xl p-6 border border-white/10">
+        <div class="text-[#2e8622] text-3xl mb-4">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <p class="text-sm text-gray-400">Data Analytics</p>
+        <h2 class="text-xl font-semibold mt-1">Business Intelligence & Insights</h2>
+        <p class="text-sm text-gray-400 mt-3 leading-relaxed">
+          Transform raw data into actionable insights using modern analytics dashboards.
+        </p>
+        <button class="mt-6 flex items-center gap-2 cursor-pointer text-white font-medium group">
+          GET STARTED
+          <span class="transition-all duration-300 group-hover:pl-2">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -38,11 +310,13 @@
 
 
 
+  
 
 
-    
+</main>
 <!--javaScript link part start---------------->
 <script src="js/script.js"></script>
 <!--javaScript link part end------------------>
 </body>
+
 </html>

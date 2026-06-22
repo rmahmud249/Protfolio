@@ -1,1 +1,132 @@
-//-----------javaScript code------------/
+// =======================================================
+// 1. TYPING EFFECT (TEXT ROTATION)
+// =======================================================
+
+const texts = [
+    "Machine Learning Engineer",
+    "Software Engineer",
+    "Full Stack Developer"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typingText = document.getElementById("typing-text");
+
+/**
+ * Typing animation with delete effect
+ */
+function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (isDeleting) {
+        typingText.textContent = currentText.substring(0, charIndex--);
+    } else {
+        typingText.textContent = currentText.substring(0, charIndex++);
+    }
+
+    let speed = isDeleting ? 50 : 100;
+
+    // Pause after full text is typed
+    if (!isDeleting && charIndex === currentText.length + 1) {
+        speed = 1500;
+        isDeleting = true;
+    }
+
+    // Move to next text after deleting
+    if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+// Start typing effect
+typeEffect();
+
+
+// =======================================================
+// 2. HERO TITLE ROTATION WITH ANIMATION
+// =======================================================
+
+const titles = [
+    "Rasel Mahmud.",
+    "Machine Learning Engineer.",
+    "Software Engineer.",
+    "Full Stack Developer."
+];
+
+const titleElement = document.getElementById("title");
+let titleIndex = 0;
+
+/**
+ * Change hero title with fade + drop animation
+ */
+function changeTitle() {
+    // Fade out effect
+    titleElement.classList.add("opacity-0", "translate-y-4");
+    titleElement.classList.remove("animate-drop");
+
+    setTimeout(() => {
+        // Update text
+        titleIndex = (titleIndex + 1) % titles.length;
+        titleElement.textContent = titles[titleIndex];
+
+        // Reset animation state
+        titleElement.classList.remove("opacity-0", "translate-y-4");
+
+        // Restart animation
+        void titleElement.offsetWidth;
+        titleElement.classList.add("animate-drop");
+    }, 400);
+}
+
+/**
+ * Initialize title animation
+ */
+function initTitleAnimation() {
+    titleElement.classList.add("animate-drop");
+    setInterval(changeTitle, 3000);
+}
+
+initTitleAnimation();
+
+
+// =======================================================
+// 3. MOBILE SIDEBAR MENU CONTROLS
+// =======================================================
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("mobileSidebar");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("closeBtn");
+
+/**
+ * Open mobile sidebar
+ */
+function openMenu() {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+}
+
+/**
+ * Close mobile sidebar
+ */
+function closeMenu() {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+}
+
+/**
+ * Initialize menu events
+ */
+function initMobileMenu() {
+    if (menuBtn) menuBtn.addEventListener("click", openMenu);
+    if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+    if (overlay) overlay.addEventListener("click", closeMenu);
+}
+
+// Initialize menu
+initMobileMenu();

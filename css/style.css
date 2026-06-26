@@ -43,3 +43,173 @@ body{
     color: #43bb33;
     background: rgba(67, 187, 51, 0.12);
 }
+.resume-section{
+    position:relative;
+    min-height:100vh;
+    padding:80px 20px;
+}
+
+.resume-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at left top,
+    rgba(104,255,80,.08),
+    transparent 35%),
+    radial-gradient(circle at right center,
+    rgba(104,255,80,.06),
+    transparent 30%);
+}
+
+.glow-dot{
+    box-shadow:0 0 20px rgba(124,255,95,.8);
+}
+
+.timeline-container{
+    position:relative;
+}
+
+.timeline-line{
+    position:absolute;
+    top:88px;
+    left:0;
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.15);
+}
+
+.slider-wrapper{
+    overflow:hidden;
+    padding-top:20px;
+}
+
+.slider{
+    display:flex;
+    transition:transform .5s ease;
+}
+
+.slide-card{
+    min-width:50%;
+    text-align:center;
+    padding:0 30px;
+}
+
+.year{
+    color:#2e8622;
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.timeline-dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#2e8622;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.card{
+    margin-top:40px;
+}
+
+.card h3{
+    color:white;
+    font-size:34px;
+    font-weight:700;
+}
+
+.company{
+    color:#7c7c7c;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-top:15px;
+    font-size:14px;
+}
+
+.description{
+    color:#d5d5d5;
+    max-width:420px;
+    margin:25px auto 0;
+    line-height:1.8;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,.25);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    background:#2e8622;
+}
+
+@media(max-width:768px){
+
+    .slide-card{
+        min-width:100%;
+    }
+
+    .timeline-line{
+        top:82px;
+    }
+
+    .card h3{
+        font-size:26px;
+    }
+
+    .year{
+        font-size:20px;
+    }
+}
+/* slider */
+.testimonialSwiper{
+    overflow:visible;
+}
+
+.swiper-slide{
+    opacity:.35;
+    transform:scale(.9);
+    transition:.5s;
+}
+
+.swiper-slide-active{
+    opacity:1;
+    transform:scale(1);
+}
+
+.card{
+    background:rgba(10,15,28,.75);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:40px;
+    height:360px;
+    transition:.4s;
+}
+
+.card:hover{
+    border-color:#2b3343;
+}
+
+.swiper-pagination{
+    margin-top:50px;
+    position:relative;
+}
+
+.swiper-pagination-bullet{
+    width:10px;
+    height:10px;
+    background:#535353;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+    background:#2e8622;
+}

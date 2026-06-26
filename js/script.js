@@ -203,3 +203,124 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+//===============================
+const slider = document.getElementById("slider");
+const dots = document.querySelectorAll(".dot");
+
+let currentIndex = 0;
+let isDragging = false;
+let startX = 0;
+
+function slideTo(index){
+
+    const isMobile = window.innerWidth <= 768;
+
+    const move = isMobile
+        ? index * 100
+        : index * 50;
+
+    slider.style.transform = `translateX(-${move}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+
+    currentIndex = index;
+}
+
+// CLICK DOTS
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        slideTo(index);
+    });
+});
+
+// =====================
+// MOUSE DRAG (DESKTOP)
+// =====================
+slider.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    slider.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+
+    const diff = e.clientX - startX;
+
+    if (diff > 80) {
+        slideTo(Math.max(0, currentIndex - 1));
+        isDragging = false;
+    }
+
+    if (diff < -80) {
+        slideTo(Math.min(dots.length - 1, currentIndex + 1));
+        isDragging = false;
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    slider.style.cursor = "grab";
+});
+
+// =====================
+// TOUCH SWIPE (MOBILE)
+// =====================
+let touchStartX = 0;
+
+slider.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", (e) => {
+    const diff = e.changedTouches[0].clientX - touchStartX;
+
+    if (diff > 50) {
+        slideTo(Math.max(0, currentIndex - 1));
+    }
+
+    if (diff < -50) {
+        slideTo(Math.min(dots.length - 1, currentIndex + 1));
+    }
+});
+
+// =====================
+// RESIZE FIX
+// =====================
+window.addEventListener("resize", () => {
+    slideTo(currentIndex);
+});
+
+// INIT
+slideTo(0);
+//===========================
+
+new Swiper(".testimonialSwiper",{
+
+    loop:true,
+    centeredSlides:true,
+    spaceBetween:30,
+
+    slidesPerView:1.15,
+
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
+
+    breakpoints:{
+        768:{
+            slidesPerView:1.6
+        },
+
+        1024:{
+            slidesPerView:2.2
+        },
+
+        1400:{
+            slidesPerView:2.6
+        }
+    }
+
+});
